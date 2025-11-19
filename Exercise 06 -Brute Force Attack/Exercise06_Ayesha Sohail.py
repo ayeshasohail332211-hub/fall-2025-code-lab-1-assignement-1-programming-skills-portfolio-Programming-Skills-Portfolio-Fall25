@@ -1,9 +1,15 @@
 correct_password= "12345"
-#The code will run until the user enters the correct password
-while True:
+attempts_left= 5   #The user has only 5 attempts
+
+#This will continue as long as the user still has attempts left
+while attempts_left > 0 :
     attempt= input("Enter the password: ").strip()
     if attempt==correct_password:
         print("Access granted. You have entered the correct password!")
-        break
+        break  #Correct password, loop stops
     else:
-        print("Invalid password. Try Again!")
+        attempts_left-=1
+        if attempts_left>0:
+            print(f"Incorrect Password. Try Again!({attempts_left} attempts remaining)")
+        else:
+            print("Too many failed attempts!")
