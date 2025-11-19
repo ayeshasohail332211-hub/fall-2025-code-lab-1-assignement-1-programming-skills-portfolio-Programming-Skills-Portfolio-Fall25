@@ -1,14 +1,22 @@
 #Using 'input()' function to ask users for their information
-Name= input("Enter you name: ")
-Hometown= input("Enter your hometown: ")
-#Using 'int' data type to make sure the age is a number and not a string
-Age= int (input("Enter your age: "))
+name= input("Enter you name: ")
+hometown= input("Enter your hometown: ")
+
+#Checking the age input
+while True:
+    user_age= input("Enter your age: ")
+    if user_age.isdigit():  
+        age= int(user_age)
+        break
+    else:
+        print("Enter the a valid number for the age")
+
 
 #Storing the information in a dictionary 
 personal_info= { 
-    "name": Name,
-    "hometown": Hometown,
-    "age": Age, 
+    "name": name,
+    "hometown": hometown,
+    "age": age 
 }
 
 #Printing the personal information in a single line
