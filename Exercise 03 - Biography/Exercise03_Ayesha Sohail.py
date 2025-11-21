@@ -9,7 +9,7 @@ while True:
         age= int(user_age)
         break
     else:
-        print("Enter the a valid number for the age")
+        print("Enter a valid number for the age")
 
 
 #Storing the information in a dictionary 
